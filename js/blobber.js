@@ -12,13 +12,13 @@ window.onload = function(){
   player.image.src = "images/blobber.png";
 
   window.onkeydown = function(e){
-    if (e.keyCode == 37) {
+    if (e.keyCode == 37 && player.x > 0) {
       player.x -= player.speed;
-    } else if (e.keyCode == 38) {
+    } else if (e.keyCode == 38 && player.y > 0) {
       player.y -= player.speed;
-    } else if (e.keyCode == 39) {
+    } else if (e.keyCode == 39 && (player.x + player.image.width) < c.width) {
       player.x += player.speed;
-    } else if (e.keyCode == 40) {
+    } else if (e.keyCode == 40 && (player.y + player.image.height) < c.height) {
       player.y += player.speed;
     }
   };
