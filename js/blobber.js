@@ -4,7 +4,7 @@ window.onload = function(){
     x: 10,
     y: 10,
     image: new Image(),
-    speed: 3,
+    speed: 5,
   },
   c = document.getElementById("blobber"),
   ctx = c.getContext("2d");
@@ -26,6 +26,7 @@ window.onload = function(){
   (function render(){
     window.requestAnimationFrame(render);
 
+    ctx.clearRect(0, 0, c.width, c.height);
     ctx.drawImage(player.image, player.x, player.y);
   })();
 
